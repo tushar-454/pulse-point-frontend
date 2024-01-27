@@ -34,8 +34,8 @@ const ServicesTabs = () => {
             {services.map((service, index) => (
               <button
                 onClick={() => setSelectedService(index)}
-                className={`bg-hit-pink-300 hover:bg-hit-pink-400 active:bg-hit-pink-500 whitespace-nowrap rounded-xl px-8 py-4 text-xl font-bold text-white transition hover:text-white ${
-                  index !== selectedService ? 'text-black' : ''
+                className={`bg-hit-pink-300 hover:bg-hit-pink-400 active:bg-hit-pink-500 whitespace-nowrap rounded-xl px-8 py-4 text-xl font-bold text-white transition hover:!text-white ${
+                  index !== selectedService ? '!text-black' : ''
                 } ${index !== selectedService ? 'bg-white' : ''} ${
                   index === selectedService
                     ? 'bg-hit-pink-500 hover:bg-hit-pink-500 active:bg-hit-pink-500'
