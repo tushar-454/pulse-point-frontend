@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "serviceCategory": "Cavity Protection",
+    "serviceName": "Electro  Gastrology Therapy",
+    "serviceDetails": "Experience Cutting-Edge Technology for Gastrointestinal Wellness.Non-Invasive Solutions for Enhanced Comfort and Quicker Recovery. Customized Treatment Plans Tailored to Individual Patient Needs. Expert Guidance from Specialized Medical Professionals. Continuous Monitoring Ensures Optimal Effectiveness for Lasting Results. Technology for Gastrointestinal Wellness. Non-Invasive Solutions for Enhanced Comfort and Quicker Recovery. Customized Treatment Plans Tailored to Individual Patient Needs. Expert Guidance from Specialized Medical Professionals. Continuous Monitoring Ensures Optimal",
+    "serviceImage": "https://i.postimg.cc/TPhYgZG8/service-cp.png"
+  },
+  {
+    "id": 1,
+    "serviceCategory": "Cosmetic Dentisty",
+    "serviceName": "Radiant Smiles Transformation",
+    "serviceDetails": "Immerse yourself in the world of Radiant Smile Transformation, where artistry meets dentistry to redefine your smile. Our Cosmetic Dentistry services encompass a range of transformative procedures, from teeth whitening and veneers to smile makeovers and orthodontic enhancements.Experience personalized treatment plans tailored to enhance your unique facial features, ensuring a natural and harmonious result. Our team of skilled and experienced cosmetic dentists combines precision with aesthetic sensibility, creating stunning, yet functional, smiles. Embrace confidence and self-assurance as our cosmetic dentistry services go beyond aesthetics, promoting overall oral health and well-being. Uncover the latest advancements in cosmetic dentistry techniques, ensuring you receive top-notch, innovative care that aligns with modern standards.Discover a new level of dental excellence with Radiant Smiles Transformation, where your journey to a brighter, more confident smile begins.",
+    "serviceImage": "https://www.lovettdentistrysugarland.com/wp-content/uploads/2020/07/dental-health-services.jpeg"
+  },
+  {
+    "id": 2,
+    "serviceCategory": "Oral Surgery",
+    "serviceName": "Precision Oral Solutions",
+    "serviceDetails": "Embark on a journey of optimal oral health with our specialized oral surgery services. From wisdom tooth extractions to corrective jaw surgeries, our skilled oral surgeons employ precision techniques. Experience personalized care as our team develops tailored treatment plans, addressing individual needs with a focus on comfort and efficiency. Benefit from cutting-edge technology and advanced surgical methodologies, ensuring the highest standard of precision in every procedure. Rest assured with our commitment to patient well-being, offering compassionate support and clear communication throughout your oral surgery experience. Choose Precision Oral Solutions for a seamless blend of expertise, technology, and compassionate care in every aspect of your oral surgery journey.",
+    "serviceImage": "https://img1.wsimg.com/isteam/stock/8569"
+  }
+]
