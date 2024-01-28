@@ -5,15 +5,15 @@ const ContactForm = () => {
   return (
     <div className='w-full lg:w-1/2'>
       <form className='space-y-4' onSubmit={(e) => e.preventDefault()}>
-        <div className='flex w-full gap-4'>
+        <div className='flex w-full flex-col gap-4 sm:flex-row'>
           <Input type='text' placeholder='Name' />
           <Input type='email' placeholder='Email' />
         </div>
-        <div className='flex w-full gap-4'>
+        <div className='flex w-full flex-col gap-4 sm:flex-row'>
           <Input type='tel' placeholder='Mobile Number' />
           <Input type='text' placeholder='Doctor Name' />
         </div>
-        <div className='flex w-full gap-4'>
+        <div className='flex w-full flex-col gap-4 sm:flex-row'>
           <Input type='date' placeholder='Date' />
           <Input type='time' placeholder='Time' />
         </div>

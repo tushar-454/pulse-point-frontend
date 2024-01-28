@@ -1,3 +1,4 @@
+import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
 import { Lexend } from 'next/font/google';
 import Head from 'next/head';
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={lexend.className}>
         <Header />
         {children}
+        <Footer />
         <Toaster />
       </body>
     </html>

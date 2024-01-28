@@ -7,7 +7,7 @@ const ContactUs = () => (
   <section>
     <Container>
       {/* ContactUs wrapper  */}
-      <div className='my-20 flex flex-col  justify-center gap-16 rounded-lg bg-deep-teal-900 p-20 text-white lg:flex-row'>
+      <div className='mb-20 flex flex-col justify-center gap-10 rounded-lg bg-deep-teal-900 p-10 text-white sm:gap-16 lg:flex-row lg:p-20'>
         {/* contact information  */}
         <div className='w-full space-y-4 lg:w-1/2'>
           <h1 className='text-center text-4xl font-bold lg:text-left'>
