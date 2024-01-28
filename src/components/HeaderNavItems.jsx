@@ -1,28 +1,73 @@
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+import { BsFillMenuButtonWideFill } from 'react-icons/bs';
+import { GiTireIronCross } from 'react-icons/gi';
+import { IoHomeSharp } from 'react-icons/io5';
+import { MdRoundaboutLeft } from 'react-icons/md';
+import { SiGooglemeet } from 'react-icons/si';
+import { TbLogin2 } from 'react-icons/tb';
+
+const navItems = [
+  {
+    id: 0,
+    name: 'Home',
+    link: '/',
+    icon: <IoHomeSharp />,
+  },
+  {
+    id: 1,
+    name: 'About',
+    link: '/',
+    icon: <MdRoundaboutLeft />,
+  },
+  {
+    id: 2,
+    name: 'Appointment',
+    link: '/',
+    icon: <SiGooglemeet />,
+  },
+  {
+    id: 3,
+    name: 'Login',
+    link: '/',
+    icon: <TbLogin2 />,
+  },
+];
+
 const HeaderNavItems = () => {
+  const [showNav, setShowNav] = useState(false);
   return (
-    <div>
-      <nav className='flex items-center justify-center gap-2'>
-        <ul className='flex items-center justify-center gap-2 text-white'>
-          <li className='mr-5'>
-            <a href='#'>Home</a>
-          </li>
-          <li className='mr-5'>
-            <a href='#'>About</a>
-          </li>
-          <li className='mr-5'>
-            <a href='#'>Contact</a>
-          </li>
-        </ul>
-        <div className='flex items-center justify-center gap-2'>
-          <button className='rounded-lg bg-[#FF4C29] px-4 py-2 text-white'>
-            Login
-          </button>
-          <button className='rounded-lg bg-[#FF4C29] px-4 py-2 text-white'>
-            Register
-          </button>
-        </div>
+    <>
+      {/* toggle button */}
+      <div onClick={() => setShowNav(!showNav)} className='block md:hidden'>
+        {showNav ? (
+          <GiTireIronCross
+            className={`cursor-pointer text-4xl text-white transition duration-300`}
+          />
+        ) : (
+          <BsFillMenuButtonWideFill
+            className={`cursor-pointer text-4xl text-white transition duration-300`}
+          />
+        )}
+      </div>
+      <nav
+        className={`${
+          showNav ? 'undo-transform-custom' : 'transform-custom'
+        } absolute left-0 top-24 flex w-full flex-col justify-center gap-5 rounded-lg bg-deep-teal-950/50 p-4 backdrop-blur-lg transition duration-300 md:static md:left-0 md:top-0 md:w-fit md:flex-row md:rounded-none md:bg-slate-100/0 md:p-0`}
+      >
+        {navItems.map((item, index) => (
+          <Link
+            key={index}
+            href={item.link}
+            className='flex w-fit items-center gap-2 rounded-full bg-gradient-to-l from-hit-pink-300 to-deep-teal-400 px-6 py-1 font-semibold text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-gradient-to-r'
+          >
+            {item.icon}
+            {item.name}
+          </Link>
+        ))}
       </nav>
-    </div>
+    </>
   );
 };
 
