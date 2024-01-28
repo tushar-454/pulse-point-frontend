@@ -1,3 +1,4 @@
+import ContactUs from '@/components/ContactUs';
 import ExpertDoctors from '@/components/ExpertDoctors';
 import Hero from '@/components/Hero';
 import Information from '@/components/Information';
@@ -12,6 +13,7 @@ const Home = () => {
       <Information />
       <TestimonialsCarousel />
       <ExpertDoctors />
+      <ContactUs />
     </main>
   );
 };
