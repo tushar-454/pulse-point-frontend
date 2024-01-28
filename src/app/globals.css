@@ -36,17 +36,19 @@ html {
   background: linear-gradient(to left, #f7a582, #65e3c6, #f7a582);
 }
 
-.transform-custom {
-  transform-origin: top;
-  transform: perspective(999px) rotateX(-30deg) translateZ(0) translateZ(5px) !important;
-  visibility: hidden;
-  opacity: 0;
-  transition: 300ms;
-}
-.undo-transform-custom {
-  transform-origin: top;
-  transform: perspective(999px) rotateX(0deg) translateZ(0) translateZ(5px) !important;
-  visibility: visible;
-  opacity: 1;
-  transition: 300ms;
+@media (width < 768px) {
+  .transform-custom {
+    transform-origin: top;
+    transform: perspective(999px) rotateX(-30deg) translateZ(0) translateZ(5px) !important;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+  }
+  .undo-transform-custom {
+    transform-origin: top;
+    transform: perspective(999px) rotateX(0deg) translateZ(0) translateZ(5px) !important;
+    visibility: visible;
+    opacity: 1;
+    transition: 300ms;
+  }
 }
