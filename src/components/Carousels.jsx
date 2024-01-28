@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import TestimonialCard from './TestimonialCard';
 const testimonials = [{}, {}, {}, {}, {}, {}, {}, {}];
@@ -19,32 +19,32 @@ const Carousels = () => {
       currentSlide === 0 ? testimonials.length - slideCount : currentSlide - 1,
     );
   };
-  useEffect(() => {
-    const sliderContainer = document.querySelectorAll('.sliderContainer');
-    let intervalId = setInterval(() => {
-      nextSlide();
-    }, 3000);
-    sliderContainer.forEach((container) => {
-      // onmouse enter slider loop stop handler
-      container.addEventListener('mouseenter', () => {
-        clearInterval(intervalId);
-      });
-      // onmouse leave slider loop start handler
-      container.addEventListener('mouseleave', () => {
-        intervalId = setInterval(() => {
-          nextSlide();
-        }, 3000);
-      });
-    });
-    // set percentage
-    if (window.innerWidth <= 992) {
-      setPercentage(100);
-      setSlideCount(1);
-    }
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [currentSlide]);
+  // useEffect(() => {
+  //   const sliderContainer = document.querySelectorAll('.sliderContainer');
+  //   let intervalId = setInterval(() => {
+  //     nextSlide();
+  //   }, 3000);
+  //   sliderContainer.forEach((container) => {
+  //     // onmouse enter slider loop stop handler
+  //     container.addEventListener('mouseenter', () => {
+  //       clearInterval(intervalId);
+  //     });
+  //     // onmouse leave slider loop start handler
+  //     container.addEventListener('mouseleave', () => {
+  //       intervalId = setInterval(() => {
+  //         nextSlide();
+  //       }, 3000);
+  //     });
+  //   });
+  //   // set percentage
+  //   if (window.innerWidth <= 992) {
+  //     setPercentage(100);
+  //     setSlideCount(1);
+  //   }
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // }, [currentSlide]);
   return (
     <div className='relative overflow-hidden py-10'>
       {/* controller  */}

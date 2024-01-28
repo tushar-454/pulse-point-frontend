@@ -41,6 +41,7 @@ const ServicesTabs = () => {
         <div className='flex justify-between gap-3 overflow-auto rounded-xl border'>
           {services.map((service, index) => (
             <button
+              key={index}
               onClick={() => setSelectedService(index)}
               className={`whitespace-nowrap rounded-xl bg-hit-pink-300 px-8 py-4 text-xl font-bold text-white transition hover:bg-hit-pink-400 hover:!text-white active:bg-hit-pink-500 ${
                 index !== selectedService ? '!text-black' : ''
