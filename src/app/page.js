@@ -1,3 +1,4 @@
+import ExpertDoctors from '@/components/ExpertDoctors';
 import Hero from '@/components/Hero';
 import Information from '@/components/Information';
 import Services from '@/components/Services';
@@ -10,6 +11,7 @@ const Home = () => {
       <Services />
       <Information />
       <TestimonialsCarousel />
+      <ExpertDoctors />
     </main>
   );
 };
