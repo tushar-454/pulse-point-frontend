@@ -18,19 +18,19 @@ const navItems = [
   {
     id: 1,
     name: 'About',
-    link: '/',
+    link: '/about',
     icon: <MdRoundaboutLeft />,
   },
   {
     id: 2,
     name: 'Appointment',
-    link: '/',
+    link: '/appointment',
     icon: <SiGooglemeet />,
   },
   {
     id: 3,
     name: 'Login',
-    link: '/',
+    link: '/login',
     icon: <TbLogin2 />,
   },
 ];

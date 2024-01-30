@@ -1,0 +1,43 @@
+'use client';
+import { useState } from 'react';
+import { LuEye, LuEyeOff } from 'react-icons/lu';
+
+const Input = ({ label, id, type, isPassword = false, error, ...rest }) => {
+  const [showPass, setShowPass] = useState(false);
+  return (
+    <div className='space-y-2'>
+      <label htmlFor={id} className='text-xl font-semibold'>
+        {label}
+      </label>
+      <div className='relative'>
+        <input
+          {...rest}
+          id={id}
+          type={showPass ? 'text' : type}
+          className={`w-full rounded-lg border border-transparent bg-gray-100 p-3 text-lg outline-none ${
+            error && 'border-red-600 bg-red-50'
+          } ${isPassword && 'pr-12'}`}
+        />
+        {/* password icon toggle */}
+        {isPassword && (
+          <div className='absolute right-2 top-3'>
+            {showPass ? (
+              <LuEyeOff
+                className='cursor-pointer text-3xl text-gray-500'
+                onClick={() => setShowPass(!showPass)}
+              />
+            ) : (
+              <LuEye
+                className='cursor-pointer text-3xl text-gray-500'
+                onClick={() => setShowPass(!showPass)}
+              />
+            )}
+          </div>
+        )}
+        <p className='mt-2 text-sm text-red-600'>{error}</p>
+      </div>
+    </div>
+  );
+};
+
+export default Input;
