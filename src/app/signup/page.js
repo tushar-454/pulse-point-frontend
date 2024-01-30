@@ -3,7 +3,7 @@ import Container from '@/components/shared/Container';
 import LoginwithGoogle from '@/components/shared/LoginwithGoogle';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
-import resolver from '@/libs/resolver';
+import { signupResolver } from '@/libs/resolver';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 
@@ -13,10 +13,11 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({ mode: 'all', resolver: resolver });
+  } = useForm({ mode: 'all', resolver: signupResolver });
   // handle form submit for create an account
   const createUserForm = (data) => {
     console.log(data);
+    reset();
   };
 
   return (

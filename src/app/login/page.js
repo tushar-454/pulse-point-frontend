@@ -1,10 +1,24 @@
+'use client';
 import Container from '@/components/shared/Container';
 import LoginwithGoogle from '@/components/shared/LoginwithGoogle';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
+import { loginResolver } from '@/libs/resolver';
 import Link from 'next/link';
+import { useForm } from 'react-hook-form';
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({ mode: 'all', resolver: loginResolver });
+  // handle form submit for login an account
+  const loginUserForm = (data) => {
+    console.log(data);
+    reset();
+  };
   return (
     <main className='bg-slate-50'>
       <Container>
@@ -15,13 +29,15 @@ const Login = () => {
               Login to Pulse Point
             </h1>
             {/* form start  */}
-            <form className='space-y-5'>
+            <form className='space-y-5' onSubmit={handleSubmit(loginUserForm)}>
               <Input
                 label={'Email'}
                 type={'text'}
                 id={'email'}
                 name={'email'}
                 placeholder={'example@text.com'}
+                register={{ ...register('email', { required: true }) }}
+                error={errors.email && errors.email.message}
               />
               <Input
                 label={'Password'}
@@ -30,8 +46,12 @@ const Login = () => {
                 name={'password'}
                 isPassword={true}
                 placeholder={'H*&%FIUHsdfh'}
+                register={{ ...register('password', { required: true }) }}
+                error={errors.password && errors.password.message}
               />
-              <Button style={{ width: '100%' }}>Login account</Button>
+              <Button style={{ width: '100%' }} type={'submit'}>
+                Login account
+              </Button>
             </form>
             <LoginwithGoogle />
             <p className='my-8 text-center text-lg font-bold'>
