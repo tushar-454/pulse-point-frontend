@@ -2,7 +2,15 @@
 import { useState } from 'react';
 import { LuEye, LuEyeOff } from 'react-icons/lu';
 
-const Input = ({ label, id, type, isPassword = false, error, ...rest }) => {
+const Input = ({
+  label,
+  id,
+  type,
+  isPassword = false,
+  error,
+  register,
+  ...rest
+}) => {
   const [showPass, setShowPass] = useState(false);
   return (
     <div className='space-y-2'>
@@ -12,6 +20,7 @@ const Input = ({ label, id, type, isPassword = false, error, ...rest }) => {
       <div className='relative'>
         <input
           {...rest}
+          {...register}
           id={id}
           type={showPass ? 'text' : type}
           className={`w-full rounded-lg border border-transparent bg-gray-100 p-3 text-lg outline-none ${
