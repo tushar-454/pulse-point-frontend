@@ -13,7 +13,7 @@ const Input = ({
 }) => {
   const [showPass, setShowPass] = useState(false);
   return (
-    <div className='space-y-2'>
+    <div className='w-full space-y-2'>
       <label htmlFor={id} className='text-xl font-semibold'>
         {label}
       </label>
