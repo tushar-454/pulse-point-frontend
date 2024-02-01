@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const DoctorCard = () => {
   return (
-    <div className='rounded-md bg-slate-50 p-4 shadow-md'>
+    <div className='rounded-md bg-slate-50 from-deep-teal-100/50 to-hit-pink-100/50 p-4 shadow-md transition-all hover:bg-gradient-to-r'>
       <div className='flex items-center justify-between'>
         <div>
           <div className='flex items-center gap-2'>
