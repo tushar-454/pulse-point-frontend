@@ -27,8 +27,8 @@ const DoctorOverview = () => {
                 {[{}, {}, {}].map((item, index) => (
                   <li key={index} className='text-lg font-bold'>
                     American Dental Madical University.
-                    <p className='ml-6 text-base font-normal'>MBBS</p>
-                    <p className='ml-6 text-base font-normal'>2015 - 2020</p>
+                    <p className='text-base font-normal'> → MBBS</p>
+                    <p className='text-base font-normal'> → 2015 - 2020</p>
                   </li>
                 ))}
               </ui>
@@ -42,8 +42,8 @@ const DoctorOverview = () => {
                 {[{}, {}, {}].map((item, index) => (
                   <li key={index} className='text-lg font-bold'>
                     Comfort Dental Clinic, New York
-                    <p className='ml-6 text-base font-normal'>2010 - 2020</p>
-                    <p className='ml-6 text-base font-normal'>10 Years</p>
+                    <p className='text-base font-normal'> → 2010 - 2020</p>
+                    <p className='text-base font-normal'> → 10 Years</p>
                   </li>
                 ))}
               </ui>
@@ -71,9 +71,9 @@ const DoctorOverview = () => {
                 {[{}, {}, {}].map((item, index) => (
                   <li key={index} className='text-lg font-bold'>
                     Humanitarian Award
-                    <p className='ml-6 text-base font-medium'>July - 2019</p>
-                    <p className='ml-6 text-justify text-base font-normal'>
-                      The Humanitarian Award is given to individuals who have
+                    <p className='text-base font-medium'> → July - 2019</p>
+                    <p className='text-justify text-base font-normal'>
+                      → The Humanitarian Award is given to individuals who have
                       made significant contributions to improving the well-being
                       and quality of life for others. It recognizes doctors who
                       have demonstrated exceptional compassion, selflessness,
