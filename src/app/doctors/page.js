@@ -56,28 +56,7 @@ const Doctors = () => {
         </form>
         {/* doctors list grid layout */}
         <div className='my-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-          {[
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-          ]?.map((doctor, index) => (
+          {[{}, {}, {}, {}, {}]?.map((doctor, index) => (
             <DoctorCard key={index} doctor={doctor} idx={index} />
           ))}
         </div>
