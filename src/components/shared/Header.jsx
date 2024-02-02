@@ -1,5 +1,6 @@
 import logo from '@/assets/images/pulse-point.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import HeaderNavItems from '../HeaderNavItems';
 import Container from './Container';
 
@@ -11,7 +12,9 @@ const Header = () => {
         <div className='relative flex w-full items-center justify-between py-2'>
           {/* header logo  */}
           <div>
-            <Image src={logo} alt='website logo' className='w-16' />
+            <Link href={'/'}>
+              <Image src={logo} alt='website logo' className='w-16' />
+            </Link>
           </div>
           {/* header navigation navs  */}
           <HeaderNavItems />

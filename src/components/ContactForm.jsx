@@ -6,18 +6,22 @@ const ContactForm = () => {
     <div className='w-full lg:w-1/2'>
       <form className='space-y-4' onSubmit={(e) => e.preventDefault()}>
         <div className='flex w-full flex-col gap-4 sm:flex-row'>
-          <Input type='text' placeholder='Name' />
-          <Input type='email' placeholder='Email' />
+          <Input type='text' placeholder='Name' data-aos='fade-up' />
+          <Input type='email' placeholder='Email' data-aos='fade-up' />
         </div>
         <div className='flex w-full flex-col gap-4 sm:flex-row'>
-          <Input type='tel' placeholder='Mobile Number' />
-          <Input type='text' placeholder='Doctor Name' />
+          <Input type='tel' placeholder='Mobile Number' data-aos='fade-up' />
+          <Input type='text' placeholder='Doctor Name' data-aos='fade-up' />
         </div>
         <div className='flex w-full flex-col gap-4 sm:flex-row'>
-          <Input type='date' placeholder='Date' />
-          <Input type='time' placeholder='Time' />
+          <Input type='date' placeholder='Date' data-aos='fade-up' />
+          <Input type='time' placeholder='Time' data-aos='fade-up' />
         </div>
-        <Button style={{ display: 'block', width: '100%' }}>Book Now</Button>
+        <p data-aos='fade-up'>
+          <Button style={{ display: 'block', width: '100%' }}>
+            Send Message
+          </Button>
+        </p>
       </form>
     </div>
   );

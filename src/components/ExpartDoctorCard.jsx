@@ -17,9 +17,10 @@ const ExpartDoctorCard = ({ doctor }) => {
     location,
     available,
     visitFee,
+    animation,
   } = doctor;
   return (
-    <div className='rounded-xl border p-4'>
+    <div className='rounded-xl border p-4' data-aos={animation}>
       {/* doctor image  */}
       <div>
         <Image

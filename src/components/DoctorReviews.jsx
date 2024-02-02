@@ -11,6 +11,7 @@ const DoctorReviews = () => {
         <div className='my-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {[{}, {}, {}, {}, {}, {}, {}, {}].map((item, index) => (
             <div
+              data-aos={index % 2 === 0 ? 'fade-down' : 'fade-up'}
               key={index}
               className='rounded-lg border from-deep-teal-100/50 to-hit-pink-100/50 p-4 shadow-lg transition-all hover:bg-gradient-to-r'
             >

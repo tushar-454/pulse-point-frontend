@@ -21,7 +21,7 @@ const Signup = () => {
   };
 
   return (
-    <main className='bg-slate-50'>
+    <main className='bg-slate-50' data-aos='zoom-in'>
       <Container>
         {/* signup wrapper  */}
         <div className='flex min-h-screen justify-center py-20'>

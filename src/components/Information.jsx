@@ -1,4 +1,3 @@
-'use client';
 import { FaRegClock } from 'react-icons/fa';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { VscCallOutgoing } from 'react-icons/vsc';
@@ -11,18 +10,21 @@ const informations = [
     icon: <FaRegClock className='relative top-1 text-5xl' />,
     infoTitle: 'Opening Hours',
     infoDesc: 'Open 9.00 am to 5.00pm Everyday',
+    animation: 'fade-up',
   },
   {
     id: 1,
     icon: <HiOutlineLocationMarker className='relative top-1 text-5xl' />,
     infoTitle: 'Our Locations',
     infoDesc: 'Dhanmondi 17, Dhaka -1200, Bangladesh',
+    animation: 'fade-down',
   },
   {
     id: 2,
     icon: <VscCallOutgoing className='relative top-1 text-5xl' />,
     infoTitle: 'Contact Us',
     infoDesc: '+8801750000000 +8801750000000',
+    animation: 'fade-up',
   },
 ];
 

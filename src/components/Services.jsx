@@ -10,7 +10,7 @@ const Services = () => {
         {/* services wrapper  */}
         <div className='flex flex-col justify-between gap-10 py-10 pb-20 md:gap-5 md:py-20 lg:flex-row'>
           {/* services side image  */}
-          <div className='w-full lg:w-1/2'>
+          <div className='w-full lg:w-1/2' data-aos='fade-up'>
             <Image
               src={servicesSideImg}
               alt='services side doctor image'
@@ -20,10 +20,13 @@ const Services = () => {
           {/* services content with tab select  */}
           <div className='w-full space-y-5 lg:w-1/2'>
             {/* title & subtitle  */}
-            <h1 className='text-center text-4xl font-bold lg:text-left'>
+            <h1
+              data-aos='fade-up'
+              className='text-center text-4xl font-bold lg:text-left'
+            >
               Our Services
             </h1>
-            <p className='text-base font-normal'>
+            <p data-aos='fade-up' className='text-base font-normal'>
               Explore a Spectrum of Healthcare Solutions: Embrace the Future
               with Telemedicine Prowess. Effortless Appointment Management for
               Seamless Workflow. Precision Diagnostics for Informed Patient

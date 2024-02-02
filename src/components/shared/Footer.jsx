@@ -1,10 +1,19 @@
+'use client';
 import footerLogo from '@/assets/images/footer-light.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from 'next/image';
+import { useEffect } from 'react';
 import FooterColumn from '../FooterColumn';
 import Button from '../ui/Button';
 import Container from './Container';
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+    });
+  }, []);
   return (
     <footer className='bg-gray-100'>
       <Container>

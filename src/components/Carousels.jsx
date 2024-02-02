@@ -102,7 +102,7 @@ const Carousels = () => {
     // };
   }, [currentSlide]);
   return (
-    <div className='relative overflow-hidden py-10'>
+    <div className='relative overflow-hidden py-10' data-aos='fade-up'>
       {/* controller  */}
       <div className='sliderContainer absolute left-[50%] top-[50%] z-50 flex w-full translate-x-[-50%] translate-y-[-50%] items-center justify-between'>
         <button onClick={prevSlide}>

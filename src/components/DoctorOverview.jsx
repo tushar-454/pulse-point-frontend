@@ -2,7 +2,7 @@ const DoctorOverview = () => {
   return (
     <div className='my-10'>
       {/* doctor profile about section */}
-      <div>
+      <div data-aos='fade-down'>
         <h1 className='text-xl font-bold'>About Me</h1>
         <p className='text-justify'>
           A doctor is a medical professional who diagnoses, treats, and prevents
@@ -20,7 +20,7 @@ const DoctorOverview = () => {
         {/* education - services - work&experience section  */}
         <div className='w-full lg:w-1/2'>
           {/* education information wrapper  */}
-          <div>
+          <div data-aos='fade-down'>
             <h1 className='my-5 text-xl font-bold'>Education</h1>
             <div className='space-y-4'>
               <ui className='list-disc'>
@@ -35,7 +35,7 @@ const DoctorOverview = () => {
             </div>
           </div>
           {/* work experience wrapper  */}
-          <div>
+          <div data-aos='fade-down'>
             <h1 className='my-5 text-xl font-bold'>Work & Experience</h1>
             <div className='space-y-4'>
               <ui className='list-disc'>
@@ -50,7 +50,7 @@ const DoctorOverview = () => {
             </div>
           </div>
           {/* services list wrapper  */}
-          <div>
+          <div data-aos='fade-down'>
             <h1 className='my-5 text-xl font-bold'>Services</h1>
             <div className='space-y-4'>
               <ui className='list-disc'>
@@ -64,7 +64,7 @@ const DoctorOverview = () => {
         {/* award and specialties section  */}
         <div className='w-full lg:w-1/2'>
           {/* award information wrapper  */}
-          <div>
+          <div data-aos='fade-down'>
             <h1 className='my-5 text-xl font-bold'>Award</h1>
             <div className='space-y-4'>
               <ui className='list-disc'>
@@ -85,7 +85,7 @@ const DoctorOverview = () => {
             </div>
           </div>
           {/* doctor specialties list wrapper  */}
-          <div>
+          <div data-aos='fade-down'>
             <h1 className='my-5 text-xl font-bold'>Specialties</h1>
             <div className='space-y-4'>
               <ui className='list-disc'>

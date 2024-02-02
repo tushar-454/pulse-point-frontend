@@ -28,7 +28,10 @@ const DoctorProfileTabs = () => {
   const [selectedTab, setSelectedTab] = useState('overview');
   return (
     <div>
-      <div className='flex justify-between gap-3 overflow-auto rounded-xl border'>
+      <div
+        data-aos='fade-down'
+        className='flex justify-between gap-3 overflow-auto rounded-xl border'
+      >
         {tabs.map((tab, index) => (
           <button
             key={index}

@@ -20,14 +20,22 @@ const Doctors = () => {
             id={'doctorName'}
             name={'doctorName'}
             placeholder={'doctor name'}
+            data-aos='fade-up'
           />
           <Input
             type={'text'}
             id={'category'}
             name={'category'}
             placeholder={'category'}
+            data-aos='fade-up'
           />
-          <Input type={'text'} id={'day'} name={'day'} placeholder={'day'} />
+          <Input
+            type={'text'}
+            id={'day'}
+            name={'day'}
+            placeholder={'day'}
+            data-aos='fade-up'
+          />
           <Input
             type={'number'}
             id={'rating'}
@@ -36,18 +44,41 @@ const Doctors = () => {
             max={5}
             step={0.1}
             placeholder={'rating'}
+            data-aos='fade-up'
           />
           <Input
             type={'text'}
             id={'location'}
             name={'location'}
             placeholder={'location'}
+            data-aos='fade-up'
           />
         </form>
         {/* doctors list grid layout */}
         <div className='my-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-          {[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]?.map((doctor, index) => (
-            <DoctorCard key={index} doctor={doctor} />
+          {[
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+            {},
+          ]?.map((doctor, index) => (
+            <DoctorCard key={index} doctor={doctor} idx={index} />
           ))}
         </div>
       </Container>

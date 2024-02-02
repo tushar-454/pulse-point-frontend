@@ -1,7 +1,8 @@
 const InformationCard = ({ information }) => {
-  const { id, icon, infoTitle, infoDesc } = information;
+  const { id, icon, infoTitle, infoDesc, animation } = information;
   return (
     <div
+      data-aos={animation}
       className={`flex gap-5 rounded-lg p-10 text-white ${
         id % 2 === 0 ? '!bg-deep-teal-800' : '!bg-hit-pink-400'
       }`}

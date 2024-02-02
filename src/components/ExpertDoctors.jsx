@@ -12,6 +12,7 @@ const expartDoctors = [
     location: 'Dhanmondi, Dhaka, Bangladesh',
     available: 'Available On Mon, 22 December',
     visitFee: 500,
+    animation: 'fade-up-right',
   },
   {
     id: 1,
@@ -22,6 +23,7 @@ const expartDoctors = [
     location: 'new york, USA',
     available: 'Available On Fri, 25 December',
     visitFee: 700,
+    animation: 'fade-up',
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const expartDoctors = [
     location: 'Banani, Dhaka, Bangladesh',
     available: 'Available On Sun, 29 December',
     visitFee: 900,
+    animation: 'fade-up-left',
   },
 ];
 
@@ -48,7 +51,7 @@ const ExpertDoctors = () => {
             }
           />
           {/* expart doctors card content and wrapper  */}
-          <div className='grid grid-cols-1 justify-between gap-5 py-16 md:grid-cols-2 lg:grid-cols-3'>
+          <div className='grid grid-cols-1 justify-between gap-5 overflow-hidden py-16 md:grid-cols-2 lg:grid-cols-3'>
             {expartDoctors?.map((doctor, index) => (
               <ExpartDoctorCard key={index} doctor={doctor} />
             ))}

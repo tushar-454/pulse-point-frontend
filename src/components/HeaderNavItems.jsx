@@ -55,11 +55,12 @@ const HeaderNavItems = () => {
       <nav
         className={`${
           showNav ? 'undo-transform-custom' : 'transform-custom'
-        } absolute left-0 top-24 flex w-full flex-col justify-center gap-3 rounded-lg bg-deep-teal-950/50 p-4 backdrop-blur-lg transition duration-300 md:static md:left-0 md:top-0 md:w-fit md:flex-row md:rounded-none md:bg-slate-100/0 md:p-0`}
+        } absolute left-0 top-24 !z-50 flex w-full flex-col justify-center gap-3 rounded-lg bg-deep-teal-950/50 p-4 backdrop-blur-lg transition duration-300 md:static md:left-0 md:top-0 md:w-fit md:flex-row md:rounded-none md:bg-slate-100/0 md:p-0`}
       >
         {navItems.map((item, index) => (
           <Link
             key={index}
+            onClick={() => setShowNav(false)}
             href={item.link}
             className='flex w-fit items-center gap-2 rounded-full bg-gradient-to-l from-hit-pink-300 to-deep-teal-400 px-5 py-1 font-semibold text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-gradient-to-r'
           >
@@ -69,6 +70,7 @@ const HeaderNavItems = () => {
         ))}
         <Link
           href={'/login'}
+          onClick={() => setShowNav(false)}
           className='flex w-fit items-center gap-2 rounded-full bg-gradient-to-l from-hit-pink-300 to-deep-teal-400 px-5 py-1 font-semibold text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-gradient-to-r'
         >
           <TbLogin2 /> Login

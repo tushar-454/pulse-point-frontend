@@ -36,7 +36,7 @@ const ServicesTabs = () => {
   const [selectedService, setSelectedService] = useState(0);
   return (
     <>
-      <div className='space-y-5'>
+      <div className='space-y-5' data-aos='fade-up'>
         {/* different services tabs wrapper  */}
         <div className='flex justify-between gap-3 overflow-auto rounded-xl border'>
           {services.map((service, index) => (
@@ -56,7 +56,7 @@ const ServicesTabs = () => {
           ))}
         </div>
         {/* details about different services tabs  */}
-        <div className='space-y-5'>
+        <div className='space-y-5' data-aos='fade-up'>
           <div>
             <Image
               src={services[selectedService]?.serviceImage || serviceTabImage}
@@ -66,14 +66,19 @@ const ServicesTabs = () => {
               className='w-full rounded-xl'
             />
           </div>
-          <h1 className='text-center text-3xl font-bold lg:text-left'>
+          <h1
+            data-aos='fade-up'
+            className='text-center text-3xl font-bold lg:text-left'
+          >
             {services[selectedService]?.serviceName || 'Service Name'}
           </h1>
-          <p className='text-base font-normal'>
+          <p data-aos='fade-up' className='text-base font-normal'>
             {services[selectedService]?.serviceDetails ||
               'Services Description'}
           </p>
-          <ButtonOutline>More Details</ButtonOutline>
+          <p data-aos='fade-up'>
+            <ButtonOutline>More Details</ButtonOutline>
+          </p>
         </div>
       </div>
     </>

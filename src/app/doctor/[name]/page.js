@@ -8,9 +8,9 @@ const DoctorProfile = () => {
     <main className='bg-slate-50 py-10'>
       <Container>
         {/* about doctor basic information */}
-        <div className='flex flex-col gap-4 rounded-xl bg-white p-5 lg:flex-row'>
+        <div className='flex flex-col gap-4 overflow-hidden rounded-xl bg-white p-5 lg:flex-row'>
           {/* doctor profile image  */}
-          <div>
+          <div data-aos='fade-right'>
             <Image
               src={
                 'https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149329007.jpg'
@@ -22,7 +22,7 @@ const DoctorProfile = () => {
             />
           </div>
           {/* doctor profile name */}
-          <div className='space-y-2'>
+          <div className='space-y-2' data-aos='fade-up'>
             <h1 className='text-[40px] font-bold'>Dr. Ruby Perrin</h1>
             <p className='text-xl font-medium'>MBBS, MD - General Medicine</p>
             <p className='text-lg'>4.5 (35)</p>
