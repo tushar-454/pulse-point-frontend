@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const LoggedInUser = ({ user }) => {
+const LoggedInUser = ({ user, logout }) => {
   const [userMenu, setUserMenu] = useState(false);
   const { displayName, email, photoURL } = user;
   return (
@@ -38,7 +38,10 @@ const LoggedInUser = ({ user }) => {
             Profile
           </Link>
         </div>
-        <button className='w-full rounded-full bg-deep-teal-900 px-4 py-2 text-white'>
+        <button
+          onClick={logout}
+          className='w-full rounded-full bg-deep-teal-900 px-4 py-2 text-white transition-all active:scale-105'
+        >
           Logout
         </button>
       </div>

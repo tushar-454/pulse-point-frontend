@@ -40,7 +40,7 @@ const navItems = [
 
 const HeaderNavItems = () => {
   const [showNav, setShowNav] = useState(false);
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   return (
     <>
       {/* toggle button */}
@@ -72,7 +72,7 @@ const HeaderNavItems = () => {
           </Link>
         ))}
         {user ? (
-          <LoggedInUser user={user} />
+          <LoggedInUser user={user} logout={logout} />
         ) : (
           <Link
             href={'/login'}

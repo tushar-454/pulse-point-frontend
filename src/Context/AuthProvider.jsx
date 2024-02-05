@@ -4,6 +4,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
@@ -28,7 +29,19 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
+  // logout handler
+  const logout = async () => {
+    setLoading(true);
+    try {
+      await signOut(auth);
+      setUser(null);
+      toast.success('Logged out successfully');
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -45,6 +58,7 @@ const AuthProvider = ({ children }) => {
     user,
     loginWithGoogle,
     loading,
+    logout,
   };
   return (
     <AuthContext.Provider value={userInfo}>{children}</AuthContext.Provider>
