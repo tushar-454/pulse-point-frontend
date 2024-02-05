@@ -1,4 +1,5 @@
 'use client';
+import useAuth from '@/Hook/useAuth';
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiSolidContact } from 'react-icons/bi';
@@ -8,6 +9,7 @@ import { GiTireIronCross } from 'react-icons/gi';
 import { IoHomeSharp } from 'react-icons/io5';
 import { MdRoundaboutLeft } from 'react-icons/md';
 import { TbLogin2 } from 'react-icons/tb';
+import LoggedInUser from './LoggedInUser';
 
 const navItems = [
   {
@@ -38,6 +40,7 @@ const navItems = [
 
 const HeaderNavItems = () => {
   const [showNav, setShowNav] = useState(false);
+  const { user } = useAuth();
   return (
     <>
       {/* toggle button */}
@@ -68,13 +71,17 @@ const HeaderNavItems = () => {
             {item.name}
           </Link>
         ))}
-        <Link
-          href={'/login'}
-          onClick={() => setShowNav(false)}
-          className='flex w-fit items-center gap-2 rounded-full bg-gradient-to-l from-hit-pink-300 to-deep-teal-400 px-5 py-1 font-semibold text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-gradient-to-r'
-        >
-          <TbLogin2 /> Login
-        </Link>
+        {user ? (
+          <LoggedInUser user={user} />
+        ) : (
+          <Link
+            href={'/login'}
+            onClick={() => setShowNav(false)}
+            className='flex w-fit items-center gap-2 rounded-full bg-gradient-to-l from-hit-pink-300 to-deep-teal-400 px-5 py-1 font-semibold text-white transition duration-100 ease-in-out hover:scale-105 hover:bg-gradient-to-r'
+          >
+            <TbLogin2 /> Login
+          </Link>
+        )}
       </nav>
     </>
   );
