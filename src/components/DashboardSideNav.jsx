@@ -44,7 +44,7 @@ const DashboardSideNav = ({ setIsNavCollapsed }) => {
   return (
     <>
       <nav className='flex flex-col gap-1'>
-        {adminNavLink.map((link, index) => (
+        {patientNavLink.map((link, index) => (
           <Link
             key={index}
             href={link.href}

@@ -25,7 +25,9 @@ const layout = ({ children }) => {
         </div>
         <DashboardSideNav setIsNavCollapsed={setIsNavCollapsed} />
       </aside>
-      <div className={`flex-grow bg-slate-100 p-3 pl-10`}>{children}</div>
+      <div className={`flex-grow overflow-auto bg-slate-100 p-3 pl-10`}>
+        {children}
+      </div>
     </main>
   );
 };
