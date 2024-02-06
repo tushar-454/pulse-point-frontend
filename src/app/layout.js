@@ -1,4 +1,3 @@
-import AuthProvider from '@/Context/AuthProvider';
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
 import { Lexend } from 'next/font/google';
@@ -16,11 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={lexend.className}>
-        <AuthProvider>
-          <Header />
-          {children}
-          <Footer />
-        </AuthProvider>
+        <Header />
+        {children}
+        <Footer />
         <Toaster />
       </body>
     </html>

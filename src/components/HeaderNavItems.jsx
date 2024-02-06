@@ -1,5 +1,4 @@
 'use client';
-import useAuth from '@/Hook/useAuth';
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiSolidContact } from 'react-icons/bi';
@@ -40,7 +39,7 @@ const navItems = [
 
 const HeaderNavItems = () => {
   const [showNav, setShowNav] = useState(false);
-  const { user, logout } = useAuth();
+  const user = false;
   return (
     <>
       {/* toggle button */}
@@ -72,7 +71,7 @@ const HeaderNavItems = () => {
           </Link>
         ))}
         {user ? (
-          <LoggedInUser user={user} logout={logout} />
+          <LoggedInUser user={user} logout={() => {}} />
         ) : (
           <Link
             href={'/login'}
