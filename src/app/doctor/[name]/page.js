@@ -1,9 +1,11 @@
 import DoctorProfileTabs from '@/components/DoctorProfileTabs';
 import Container from '@/components/shared/Container';
+import { loginIsRequiredServer } from '@/libs/auth';
 import Image from 'next/image';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
-const DoctorProfile = () => {
+const DoctorProfile = async () => {
+  await loginIsRequiredServer();
   return (
     <main className='bg-slate-50 py-10'>
       <Container>

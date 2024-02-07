@@ -4,10 +4,14 @@ import LoginwithGoogle from '@/components/shared/LoginwithGoogle';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import { loginResolver } from '@/libs/resolver';
+import { getSession } from 'next-auth/react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import { authOptions } from '../api/auth/[...nextauth]/route';
 
 const Login = () => {
+  const session = getSession(authOptions);
   const {
     register,
     handleSubmit,
@@ -19,8 +23,11 @@ const Login = () => {
     console.log(data);
     reset();
   };
+  if (session) {
+    redirect('/');
+  }
   return (
-    <main className='bg-slate-50' data-aos='zoom-in'>
+    <main className='bg-slate-50'>
       <Container>
         {/* login wrapper  */}
         <div className='flex min-h-screen justify-center py-20'>
