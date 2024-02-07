@@ -6,12 +6,14 @@ import Input from '@/components/ui/Input';
 import { signupResolver } from '@/libs/resolver';
 import { getSession } from 'next-auth/react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 
 const Signup = () => {
-  const session = getSession(authOptions);
+  const [session, setSession] = useState(null);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -23,8 +25,15 @@ const Signup = () => {
     console.log(data);
     reset();
   };
+  useEffect(() => {
+    async function session() {
+      const session = await getSession(authOptions);
+      setSession(session);
+    }
+    session();
+  }, []);
   if (session) {
-    redirect('/');
+    router.push('/');
   }
   return (
     <main className='bg-slate-50'>
