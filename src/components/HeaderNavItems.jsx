@@ -1,6 +1,7 @@
 'use client';
+import { getSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BiSolidContact } from 'react-icons/bi';
 import { BsFillMenuButtonWideFill } from 'react-icons/bs';
 import { FaUserDoctor } from 'react-icons/fa6';
@@ -39,7 +40,16 @@ const navItems = [
 
 const HeaderNavItems = () => {
   const [showNav, setShowNav] = useState(false);
-  const user = false;
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const userSession = async () => {
+      const session = await getSession();
+      if (session) {
+        setUser(session.user);
+      }
+    };
+    userSession();
+  }, []);
   return (
     <>
       {/* toggle button */}
@@ -71,7 +81,7 @@ const HeaderNavItems = () => {
           </Link>
         ))}
         {user ? (
-          <LoggedInUser user={user} logout={() => {}} />
+          <LoggedInUser user={user} />
         ) : (
           <Link
             href={'/login'}
