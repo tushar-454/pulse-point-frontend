@@ -1,7 +1,7 @@
 const page = () => {
   return (
     <div className='w-full'>
-      {/* top of the page label and date  */}
+      {/* top of the page label  */}
       <div className='flex flex-col items-center justify-between gap-1 sm:flex-row'>
         <h1 className='text-xl font-bold'>All Users : 06</h1>
       </div>
