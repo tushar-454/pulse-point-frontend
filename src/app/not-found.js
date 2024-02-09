@@ -6,7 +6,7 @@ const NotFound = () => {
     <section className='min-h-screen space-y-10 pt-20'>
       <div className='flex flex-col items-center'>
         <h1 className='text-5xl font-bold'>Sorry</h1>
-        <p className='text-3xl font-medium text-gray-500'>
+        <p className='text-center text-3xl font-medium text-gray-500'>
           This page is not found
         </p>
       </div>

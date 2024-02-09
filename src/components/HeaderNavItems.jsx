@@ -81,7 +81,7 @@ const HeaderNavItems = () => {
           </Link>
         ))}
         {user ? (
-          <LoggedInUser user={user} />
+          <LoggedInUser user={user} setShowNav={setShowNav} />
         ) : (
           <Link
             href={'/login'}
