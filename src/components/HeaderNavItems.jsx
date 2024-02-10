@@ -2,9 +2,8 @@
 import { getSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { BiSolidContact } from 'react-icons/bi';
 import { BsFillMenuButtonWideFill } from 'react-icons/bs';
-import { FaUserDoctor } from 'react-icons/fa6';
+import { FaStethoscope, FaUserDoctor } from 'react-icons/fa6';
 import { GiTireIronCross } from 'react-icons/gi';
 import { IoHomeSharp } from 'react-icons/io5';
 import { MdRoundaboutLeft } from 'react-icons/md';
@@ -32,9 +31,9 @@ const navItems = [
   },
   {
     id: 3,
-    name: 'Contact Us',
-    link: '/contact',
-    icon: <BiSolidContact />,
+    name: 'Services',
+    link: '/services',
+    icon: <FaStethoscope />,
   },
 ];
 
