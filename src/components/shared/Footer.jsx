@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
+import { PiCaretDoubleUpBold } from 'react-icons/pi';
 import FooterColumn from '../FooterColumn';
 import Button from '../ui/Button';
 import Container from './Container';
@@ -14,6 +15,16 @@ const Footer = () => {
   useEffect(() => {
     AOS.init({
       duration: 600,
+    });
+    const gotopBtn = document.querySelector('.gotopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 2500) {
+        gotopBtn.style.visibility = 'visible';
+        gotopBtn.style.opacity = '100';
+      } else {
+        gotopBtn.style.visibility = 'hidden';
+        gotopBtn.style.opacity = '0';
+      }
     });
   }, []);
   return (
@@ -87,6 +98,12 @@ const Footer = () => {
               </p>
             </div>
           </Container>
+          <div
+            onClick={() => window.scroll(0, 0)}
+            className='gotopBtn invisible fixed bottom-5 right-5 opacity-0'
+          >
+            <PiCaretDoubleUpBold className='h-10 w-10 rounded-lg bg-deep-teal-950 p-2 text-2xl text-white' />
+          </div>
         </footer>
       )}
     </>

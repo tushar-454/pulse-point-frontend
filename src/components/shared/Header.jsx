@@ -18,7 +18,7 @@ const Header = () => {
     });
   }, []);
   return (
-    <header className='bg-deep-teal-950'>
+    <header className='bg-deep-teal-950' id='header'>
       <Container>
         {/* header wrapper  */}
         <div className='relative flex w-full items-center justify-between py-2'>
