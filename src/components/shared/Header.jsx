@@ -1,10 +1,22 @@
+'use client';
 import logo from '@/assets/images/pulse-point.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react';
 import HeaderNavItems from '../HeaderNavItems';
 import Container from './Container';
 
 const Header = () => {
+  useEffect(() => {
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('headerFixed');
+      } else if (window.scrollY === 0) {
+        header.classList.remove('headerFixed');
+      }
+    });
+  }, []);
   return (
     <header className='bg-deep-teal-950'>
       <Container>

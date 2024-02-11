@@ -52,3 +52,20 @@ html {
     transition: 300ms;
   }
 }
+
+/* sticky css for header  */
+@keyframes sticky {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+.headerFixed {
+  animation: sticky 0.5s 1;
+  z-index: 9999 !important;
+  position: sticky;
+  top: 0;
+}
