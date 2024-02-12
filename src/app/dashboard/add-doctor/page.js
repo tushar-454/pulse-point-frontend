@@ -3,9 +3,9 @@ import Input from '@/components/ui/Input';
 import SelectInput from '@/components/ui/SelectInput';
 import Image from 'next/image';
 
-const page = () => {
+const AddDoctor = () => {
   return (
-    <div className='w-full'>
+    <div className='w-full lg:w-[768px]'>
       {/* top of the page label  */}
       <div className='flex flex-col items-center justify-between gap-1 sm:flex-row'>
         <h1 className='text-xl font-bold'>Add a Doctor</h1>
@@ -56,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AddDoctor;
